@@ -1,10 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary: #000000;
-  --color-secondary: #FFFFFF;
-  --color-accent: #3B82F6;
-  --color-background: #FFFFFF;
+  --color-primary: #111827;
+  --color-secondary: #ffffff;
+  --color-accent: #3b82f6;
+  --color-success: #06b6d4;
+  --color-error: #ef4444;
+
+  --color-background: #f9fafb;
+  --color-surface: #ffffff;
+  --color-border: rgba(17, 24, 39, 0.12);
 }
 
 * {
@@ -23,4 +28,50 @@ body {
 
 body {
   font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Lightweight markdown defaults for preview mode */
+.markdown {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: var(--color-primary);
+}
+.markdown h1,
+.markdown h2,
+.markdown h3 {
+  line-height: 1.2;
+  margin: 1rem 0 0.5rem;
+  font-weight: 650;
+}
+.markdown p {
+  margin: 0.5rem 0;
+}
+.markdown ul,
+.markdown ol {
+  margin: 0.5rem 0 0.75rem 1.25rem;
+}
+.markdown code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-size: 0.9em;
+  background: rgba(59, 130, 246, 0.08);
+  padding: 0.1rem 0.25rem;
+  border-radius: 0.25rem;
+}
+.markdown pre {
+  overflow: auto;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background: rgba(17, 24, 39, 0.04);
+  border: 1px solid var(--color-border);
+}
+.markdown blockquote {
+  border-left: 3px solid rgba(59, 130, 246, 0.35);
+  padding-left: 0.75rem;
+  margin: 0.75rem 0;
+  color: rgba(17, 24, 39, 0.8);
+}
+.markdown a {
+  color: var(--color-accent);
+  text-decoration: underline;
 }
